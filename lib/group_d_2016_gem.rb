@@ -11,7 +11,8 @@ module GroupD2016Gem
                     p a
                 end
             end
-        end 
+        end
+        a 
     end
 
     def quick_sort(a)
