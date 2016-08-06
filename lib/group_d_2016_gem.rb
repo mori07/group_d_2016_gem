@@ -58,17 +58,19 @@ module GroupD2016Gem
       res
     end
 
-    def select_sort
-      tmp = self.dup
-      res = []
-      res.push tmp.delete_min until tmp.empty?
-      res
+    def select_sort(a)
+      n= a.size
+      0.upto(n - 2) do |i|
+        min = i
+        (i + 1).upto(n - 1) do |j|
+           min = j if a[j] < a[min]
+        end
+        if i != min
+          a[i], a[min] = a[min], a[i]
+        end
+       end
+       a
     end
-    def delete_min
-      min_idx = find_index { |item| item == self.min }
-      delete_at(min_idx)
-    end
-
   end
 end
 
