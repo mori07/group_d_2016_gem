@@ -12,4 +12,8 @@ class Sorter
     min_idx = find_index { |item| item == self.min }
     delete_at(min_idx)
   end
+<<<<<<< HEAD
 end
+=======
+end 
+>>>>>>> master
