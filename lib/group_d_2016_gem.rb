@@ -13,6 +13,16 @@ module GroupD2016Gem
             end
         end 
     end
+
+    def quick_sort(a)
+        if a.size <= 1
+            return a
+        end
+        pivot = a.delete_at(a.size / 2)
+        smaller, bigger = a.partition {|i| i < pivot}
+        ret = quick_sort(smaller) + [pivot] + quick_sort(bigger)
+        return ret  
+    end
   
     # Merge Sort 
     # Use this method if you want to sort.
