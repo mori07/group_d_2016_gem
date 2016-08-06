@@ -17,4 +17,8 @@ class GroupD2016GemTest < Minitest::Test
   def test_quick_sort
     assert_equal([-21, -3, 0, 1, 4, 10, 10000],@sorter.quick_sort([0, -3, 10, 1, 4, 10000, -21]), 'quick sort')
   end
+  def test_select_sort
+    assert_equal([-21, -3, 0, 1, 4, 10, 10000],@sorter.select_sort([0, -3, 10, 1, 4, 10000, -21]), 'select sort')
+  end
+
 end

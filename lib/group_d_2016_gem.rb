@@ -58,6 +58,20 @@ module GroupD2016Gem
       res
     end
 
+    def select_sort(a)
+      n= a.size
+      0.upto(n - 2) do |i|
+        min = i
+        (i + 1).upto(n - 1) do |j|
+           min = j if a[j] < a[min]
+        end
+        if i != min
+          a[i], a[min] = a[min], a[i]
+        end
+       end
+       a
+    end
   end
 end
+
 
